@@ -1,2 +1,2 @@
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/logi443/packet/main/private-net-setup.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/logi443/private-net-setup.sh/main/private-net-setup.sh)
