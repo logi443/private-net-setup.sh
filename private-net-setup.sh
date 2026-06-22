@@ -237,7 +237,7 @@ setup_vm_network() {
     echo -e "${BLUE}  ────────────────────────────────────────────────────${NC}"
     echo ""
 
-    PUB_IP=$(ip addr show eth0 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)
+    PUB_IP=$(ip addr show eth0 2>/dev/null | grep 'inet ' | awk 'NR==1{print $2}' | cut -d'/' -f1)
     GATEWAY=$(ip route show default 2>/dev/null | awk '{print $3}' | head -1)
 
     if [ -z "$PUB_IP" ] || [ -z "$GATEWAY" ]; then
